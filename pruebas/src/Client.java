@@ -16,6 +16,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         // need host and port, we want to connect to the ServerSocket at port 7777
+        System.out.println("Cliente");
         Socket socket = new Socket("localhost", 1234);
         System.out.println("Connected!");
         

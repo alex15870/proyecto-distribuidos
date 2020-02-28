@@ -15,7 +15,7 @@ public class Server {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         // don't need to specify a hostname, it will be the current machine
         
-        
+        System.out.println("Servidor");
         ServerSocket ss = new ServerSocket(7777);
         System.out.println("ServerSocket awaiting connections...");
         Socket socket = ss.accept(); // blocking call, this will wait until a connection is attempted on this port.

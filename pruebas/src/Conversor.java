@@ -18,10 +18,12 @@ import java.util.List;
 public class Conversor {
     
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         //Recibir informacion
         //------------------------------------------------------------------------------------
         // don't need to specify a hostname, it will be the current machine
+        System.out.println("conversor");
+        
         ServerSocket ss = new ServerSocket(1234);
         System.out.println("ServerSocket awaiting connections...");
         Socket socket = ss.accept(); // blocking call, this will wait until a connection is attempted on this port.
@@ -56,10 +58,12 @@ public class Conversor {
         //inicio de mandado de datos
         //------------------------------------------------------------------------------------------------------------------------------
         
+        
+        
+        
         Socket socket2 = new Socket("localhost", 7777);
         System.out.println("Connected!");
         
-
         // get the output stream from the socket.
         OutputStream outputStream = socket2.getOutputStream();
         // create an object output stream from the output stream so we can send an object through it
